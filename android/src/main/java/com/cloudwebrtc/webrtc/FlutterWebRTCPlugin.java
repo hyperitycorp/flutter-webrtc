@@ -128,26 +128,26 @@ public class FlutterWebRTCPlugin implements MethodCallHandler {
                 .setAudioDeviceModule(audioDeviceModule)
                 .createPeerConnectionFactory();
 
-        rtcAudioManager = RTCAudioManager.create(registrar.context());
-        // Store existing audio settings and change audio mode to
-        // MODE_IN_COMMUNICATION for best possible VoIP performance.
-        Log.d(TAG, "Starting the audio manager...");
-        rtcAudioManager.start(new RTCAudioManager.AudioManagerEvents() {
-            // This method will be called each time the number of available audio
-            // devices has changed.
-            @Override
-            public void onAudioDeviceChanged(
-                RTCAudioManager.AudioDevice audioDevice, Set<RTCAudioManager.AudioDevice> availableAudioDevices) {
-                onAudioManagerDevicesChanged(audioDevice, availableAudioDevices);
-            }
-        });
-        /*
-        if (audioManager != null) {
-            audioManager.stop();
-            audioManager = null;
-        }
-        */
-    }
+    //     rtcAudioManager = RTCAudioManager.create(registrar.context());
+    //     // Store existing audio settings and change audio mode to
+    //     // MODE_IN_COMMUNICATION for best possible VoIP performance.
+    //     Log.d(TAG, "Starting the audio manager...");
+    //     rtcAudioManager.start(new RTCAudioManager.AudioManagerEvents() {
+    //         // This method will be called each time the number of available audio
+    //         // devices has changed.
+    //         @Override
+    //         public void onAudioDeviceChanged(
+    //             RTCAudioManager.AudioDevice audioDevice, Set<RTCAudioManager.AudioDevice> availableAudioDevices) {
+    //             onAudioManagerDevicesChanged(audioDevice, availableAudioDevices);
+    //         }
+    //     });
+    //     /*
+    //     if (audioManager != null) {
+    //         audioManager.stop();
+    //         audioManager = null;
+    //     }
+    //     */
+    // }
 
     private void startAudioManager() {
         if(rtcAudioManager != null)
