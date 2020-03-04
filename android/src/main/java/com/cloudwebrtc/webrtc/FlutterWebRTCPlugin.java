@@ -147,7 +147,7 @@ public class FlutterWebRTCPlugin implements MethodCallHandler {
     //         audioManager = null;
     //     }
     //     */
-    // }
+    }
 
     private void startAudioManager() {
         if(rtcAudioManager != null)
